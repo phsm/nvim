@@ -14,21 +14,20 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- plugins here
-    {
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    },
-    { 'nvim-lua/plenary.nvim' },
-    { 'nvim-treesitter/nvim-treesitter' },
-    { 'nvim-telescope/telescope.nvim' },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
+    { "neovim/nvim-lspconfig" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-buffer" },
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-treesitter/nvim-treesitter" },
+    { "nvim-telescope/telescope.nvim" },
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
     { "RRethy/vim-illuminate" },
     { "numToStr/Comment.nvim", opts = {} },
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
   },
   -- colorscheme that will be used when installing plugins.
   -- install = { colorscheme = { "tokyonight" } },
